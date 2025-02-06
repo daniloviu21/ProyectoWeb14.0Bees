@@ -10,6 +10,8 @@ import { DashboardPageComponent } from './pages/dashboard-page/dashboard-page.co
 import { UserManagementComponent } from './pages/user-management/user-management.component';
 import { ProductManagementComponent } from './pages/product-management/product-management.component';
 import { OrderManagementComponent } from './pages/order-management/order-management.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import { OrderManagementComponent } from './pages/order-management/order-managem
     DashboardPageComponent,
     UserManagementComponent,
     ProductManagementComponent,
-    OrderManagementComponent
+    OrderManagementComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule
   ],
   providers: [
     provideClientHydration(withEventReplay()),
