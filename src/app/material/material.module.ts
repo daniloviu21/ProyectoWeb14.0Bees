@@ -18,6 +18,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   exports: [
@@ -39,6 +40,7 @@ import { MatTableModule } from '@angular/material/table';
     BrowserModule,
     BrowserAnimationsModule,
     MatTableModule,
+    MatPaginatorModule
   ]
 })
 export class MaterialModule { }
