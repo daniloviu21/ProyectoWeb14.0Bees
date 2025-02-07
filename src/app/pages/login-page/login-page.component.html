@@ -1,1 +1,24 @@
-<p>login-page works!</p>
+<div class="login-container">
+    <div class="left-panel">
+        <img src="https://raw.githubusercontent.com/jrvrr/DESARROLLO-MOVIL-MULTIPLATAFORMA/main/src/assets/icon/logo.vanguard.png"
+            alt="Logo" class="logo" />
+        <p>Un gusto tenerte de vuelta, echa un vistazo a todo lo que tenemos para ti.</p>
+    </div>
+    <div class="right-panel">
+        <h2>{{ isLoginMode ? 'Inicia sesión' : 'Regístrate' }}</h2>
+        <form [formGroup]="isLoginMode ? loginForm : registerForm" (ngSubmit)="onSubmit()">
+            <input formControlName="email" type="email" placeholder="Correo electrónico" />
+            <input formControlName="password" type="password" placeholder="Contraseña" />
+            <input *ngIf="!isLoginMode" formControlName="confirmPassword" type="password"
+                placeholder="Confirmar contraseña" />
+            <div class="options" *ngIf="isLoginMode">
+                <label><input type="checkbox" /> Acuérdate de mí</label>
+                <a href="#">Olvidé mi contraseña</a>
+            </div>
+            <button type="submit" class="btn-primary">{{ isLoginMode ? 'Acceder' : 'Registrarse' }}</button>
+        </form>
+        <p class="register-link">{{ isLoginMode ? '¿No tienes una cuenta?' : '¿Ya tienes una cuenta?' }}
+            <a href="#" (click)="toggleMode()">{{ isLoginMode ? 'Regístrate' : 'Inicia sesión' }}</a>
+        </p>
+    </div>
+</div>
