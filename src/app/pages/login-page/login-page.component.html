@@ -1,1 +1,29 @@
-<p>login-page works!</p>
+<div class="login-container">
+    <mat-card class="login-card">
+        <div class="left-panel">
+            <img src="https://raw.githubusercontent.com/jrvrr/DESARROLLO-MOVIL-MULTIPLATAFORMA/main/src/assets/icon/logo.vanguard.png"
+                alt="Logo" class="logo" />
+            <p>Un gusto tenerte de vuelta, echa un vistazo a todo lo que tenemos para ti.</p>
+        </div>
+        <div class="right-panel">
+            <h2>Inicia sesión</h2>
+            <p>Nos alegramos de tenerte de vuelta.</p>
+
+            <form>
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Correo</mat-label>
+                    <input matInput type="email" required>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput type="password" required>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" class="full-width" routerLink="/dashboard ">Ingresar</button>
+            </form>
+
+
+        </div>
+    </mat-card>
+</div>

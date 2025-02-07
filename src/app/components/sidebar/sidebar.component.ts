@@ -10,8 +10,10 @@ export class SidebarComponent {
 
   public sidebarItems = [
     { label: 'Inicio', icon: 'label', url: '/dashboard' },
-    { label: 'Gestionar', icon: 'add', url: '/user-management' },
-    { label: 'Buscar', icon: 'search', url: '/.search' },
+    { label: 'Gestionar usuarios', icon: 'add', url: '/user-management' },
+    { label: 'Gestionar productos', icon: 'add', url: '/product-management' },
+    { label: 'Gestionar pedidos', icon: 'add', url: '/order-management' },
+    { label: 'Salir', icon: 'logout', url: '/login' },
  ]
 
 }

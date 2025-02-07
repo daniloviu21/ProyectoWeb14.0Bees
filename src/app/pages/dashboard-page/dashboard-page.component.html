@@ -1,1 +1,12 @@
-<app-sidebar></app-sidebar>
+<app-sidebar>
+    <div class="dashboard-container">
+        <mat-card class="dashboard-card" *ngFor="let item of [{ label: 'Registros', value: registros }, { label: 'Inicios', value: inicios }, { label: 'Visitas', value: visitas }]">
+          <mat-card-header>
+            <mat-card-title>{{ item.label }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p class="dashboard-value">{{ item.value }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+</app-sidebar>

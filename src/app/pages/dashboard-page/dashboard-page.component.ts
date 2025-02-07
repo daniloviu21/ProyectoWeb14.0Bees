@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './dashboard-page.component.css'
 })
 export class DashboardPageComponent {
-  
+  registros: number;
+    inicios: number;
+    visitas: number;
+
+    constructor() {
+        this.registros = 10;
+        this.inicios = 20;
+        this.visitas = 30;
+    }
 }
