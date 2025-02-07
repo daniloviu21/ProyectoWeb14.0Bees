@@ -1,24 +1,32 @@
 <div class="login-container">
-    <div class="left-panel">
-        <img src="https://raw.githubusercontent.com/jrvrr/DESARROLLO-MOVIL-MULTIPLATAFORMA/main/src/assets/icon/logo.vanguard.png"
-            alt="Logo" class="logo" />
-        <p>Un gusto tenerte de vuelta, echa un vistazo a todo lo que tenemos para ti.</p>
-    </div>
-    <div class="right-panel">
-        <h2>{{ isLoginMode ? 'Inicia sesión' : 'Regístrate' }}</h2>
-        <form [formGroup]="isLoginMode ? loginForm : registerForm" (ngSubmit)="onSubmit()">
-            <input formControlName="email" type="email" placeholder="Correo electrónico" />
-            <input formControlName="password" type="password" placeholder="Contraseña" />
-            <input *ngIf="!isLoginMode" formControlName="confirmPassword" type="password"
-                placeholder="Confirmar contraseña" />
-            <div class="options" *ngIf="isLoginMode">
-                <label><input type="checkbox" /> Acuérdate de mí</label>
-                <a href="#">Olvidé mi contraseña</a>
-            </div>
-            <button type="submit" class="btn-primary">{{ isLoginMode ? 'Acceder' : 'Registrarse' }}</button>
-        </form>
-        <p class="register-link">{{ isLoginMode ? '¿No tienes una cuenta?' : '¿Ya tienes una cuenta?' }}
-            <a href="#" (click)="toggleMode()">{{ isLoginMode ? 'Regístrate' : 'Inicia sesión' }}</a>
-        </p>
-    </div>
+    <mat-card class="login-card">
+        <div class="left-panel">
+            <img src="https://raw.githubusercontent.com/jrvrr/DESARROLLO-MOVIL-MULTIPLATAFORMA/main/src/assets/icon/logo.vanguard.png"
+                alt="Logo" class="logo" />
+            <p>Un gusto tenerte de vuelta, echa un vistazo a todo lo que tenemos para ti.</p>
+        </div>
+        <div class="right-panel">
+            <h2>Inicia sesión</h2>
+            <p>Nos alegramos de tenerte de vuelta.</p>
+
+            <form>
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Correo</mat-label>
+                    <input matInput type="email" required>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" class="full-width">
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput type="password" required>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" class="full-width">Ingresar</button>
+            </form>
+
+            <p class="register-link">
+                ¿No tienes una cuenta?
+                <a mat-button color="accent" routerLink="/register">Regístrate</a>
+            </p>
+        </div>
+    </mat-card>
 </div>
